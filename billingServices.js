@@ -4,11 +4,14 @@ var express = require('express'),
     app     = express(),
     eps     = require('ejs'),
     morgan  = require('morgan');
+
+    bodyParser = require('body-parser');
     
-Object.assign=require('object-assign')
+Object.assign=require('object-assign');
 
 app.engine('html', require('ejs').renderFile);
-app.use(morgan('combined'))
+app.use(morgan('combined'));
+app.use(bodyParser.json());
 
 var port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080,
     ip   = process.env.IP   || process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0',
@@ -94,7 +97,7 @@ app.get('/pagecount', function (req, res) {
 
 app.get('/hello', function(req, res) {
 	var result = [
-	  { status : "hello 6"}
+	  { status : "hello 7"}
 	];
   res.json(result);
 });

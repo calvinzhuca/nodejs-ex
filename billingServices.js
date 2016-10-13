@@ -9,8 +9,8 @@ Object.assign=require('object-assign')
 
 app.engine('html', require('ejs').renderFile);
 app.use(morgan('combined'))
-bodyParser = require('body-parser'),
-app.use(bodyParser.json());
+//bodyParser = require('body-parser'),
+//app.use(bodyParser.json());
 
 var port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080,
     ip   = process.env.IP   || process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0',
@@ -96,11 +96,12 @@ app.get('/pagecount', function (req, res) {
 
 app.get('/hello', function(req, res) {
 	var result = [
-	  { status : "hello 3"}
+	  { status : "hello x4"}
 	];
   res.json(result);
 });
 
+/*
 app.post('/process', function(req, res) {
   if(!req.body.hasOwnProperty('creditCardNumber') || !req.body.hasOwnProperty('verificationCode')) {
     res.statusCode = 400;
@@ -141,7 +142,7 @@ app.post('/process', function(req, res) {
 
 	  res.json(result);
 });
-
+*/
 
 
 // error handling

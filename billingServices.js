@@ -97,7 +97,7 @@ app.get('/pagecount', function (req, res) {
 
 app.get('/hello', function(req, res) {
 	var result = [
-	  { status : "hello 1"}
+	  { status : "hello 2"}
 	];
   res.json(result);
 });

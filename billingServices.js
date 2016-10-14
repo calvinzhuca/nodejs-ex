@@ -5,7 +5,7 @@ var express = require('express'),
     eps     = require('ejs'),
     morgan  = require('morgan');
 
-//    bodyParser = require('body-parser');
+var    bodyParser = require('body-parser');
     
 Object.assign=require('object-assign');
 
@@ -97,7 +97,7 @@ app.get('/pagecount', function (req, res) {
 
 app.get('/hello', function(req, res) {
 	var result = [
-	  { status : "hello 8"}
+	  { status : "hello 9"}
 	];
   res.json(result);
 });

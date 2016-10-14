@@ -5,7 +5,7 @@ var express = require('express'),
     eps     = require('ejs'),
     morgan  = require('morgan');
 
-    bodyParser = require('body-parser');
+//    bodyParser = require('body-parser');
     
 Object.assign=require('object-assign');
 
